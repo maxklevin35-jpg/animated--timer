@@ -8,14 +8,27 @@
 <body>
 
 <div class="container">
+  <h2>⏳ Focus Timer</h2>
+
   <div class="timer">
-    <svg>
-      <circle cx="100" cy="100" r="90"></circle>
-      <circle cx="100" cy="100" r="90" id="progress"></circle>
+    <svg width="220" height="220">
+      <circle cx="110" cy="110" r="90"></circle>
+      <circle cx="110" cy="110" r="90" id="progress"></circle>
     </svg>
-    <div id="time">01:00</div>
+    <div id="time">1:00</div>
   </div>
 
+  <!-- Preset buttons -->
+  <div class="presets">
+    <button onclick="setTime(30)">30s</button>
+    <button onclick="setTime(60)">1m</button>
+    <button onclick="setTime(120)">2m</button>
+    <button onclick="setTime(300)">5m</button>
+    <button onclick="setTime(1800)">30m</button>
+    <button onclick="setTime(3600)">1h</button>
+  </div>
+
+  <!-- Control buttons -->
   <div class="buttons">
     <button onclick="startTimer()">Start</button>
     <button onclick="pauseTimer()">Pause</button>
