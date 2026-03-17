@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Animated Timer</title>
+  <title>Focus Timer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div id="time">1:00</div>
   </div>
 
-  <!-- Preset buttons -->
+  <!-- Presets -->
   <div class="presets">
     <button onclick="setTime(30)">30s</button>
     <button onclick="setTime(60)">1m</button>
@@ -28,11 +28,12 @@
     <button onclick="setTime(3600)">1h</button>
   </div>
 
-  <!-- Control buttons -->
+  <!-- Controls -->
   <div class="buttons">
     <button onclick="startTimer()">Start</button>
     <button onclick="pauseTimer()">Pause</button>
     <button onclick="resetTimer()">Reset</button>
+    <button onclick="toggleMusic()">Music On/Off</button>
   </div>
 </div>
 
