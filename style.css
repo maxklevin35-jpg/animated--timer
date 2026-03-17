@@ -48,6 +48,7 @@ circle {
   stroke-dasharray: 565;
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
+  filter: drop-shadow(0 0 10px #38bdf8);
 }
 
 #time {
@@ -56,6 +57,7 @@ circle {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .presets {
