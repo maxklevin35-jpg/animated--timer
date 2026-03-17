@@ -1,17 +1,19 @@
 let totalTime = 60;
 let timeLeft = totalTime;
-let timer;
+let timer = null;
 let running = false;
 
 const timeDisplay = document.getElementById("time");
 const progress = document.getElementById("progress");
 
-const circumference = 2 * Math.PI * 90;
+const radius = 90;
+const circumference = 2 * Math.PI * radius;
 progress.style.strokeDasharray = circumference;
 
 function updateDisplay() {
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
+
   timeDisplay.textContent =
     `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
@@ -19,10 +21,18 @@ function updateDisplay() {
   progress.style.strokeDashoffset = offset;
 }
 
+function setTime(seconds) {
+  clearInterval(timer);
+  totalTime = seconds;
+  timeLeft = seconds;
+  running = false;
+  updateDisplay();
+}
+
 function startTimer() {
   if (running) return;
-  running = true;
 
+  running = true;
   timer = setInterval(() => {
     if (timeLeft > 0) {
       timeLeft--;
@@ -30,6 +40,7 @@ function startTimer() {
     } else {
       clearInterval(timer);
       running = false;
+      alert("Time's up!");
     }
   }, 1000);
 }
@@ -46,4 +57,5 @@ function resetTimer() {
   updateDisplay();
 }
 
+// Initialize display
 updateDisplay();
