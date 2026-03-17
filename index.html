@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="timer">
+    <svg>
+      <circle cx="100" cy="100" r="90"></circle>
+      <circle cx="100" cy="100" r="90" id="progress"></circle>
+    </svg>
+    <div id="time">01:00</div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
